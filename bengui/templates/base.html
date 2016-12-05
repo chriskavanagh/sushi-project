@@ -1,0 +1,101 @@
+{% load staticfiles %}
+{% load tz %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Sushi</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+        <script src="https://use.fontawesome.com/c7295ae472.js"></script>
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" media="screen" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootflat.min.css' %}">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/style-portfolio.css' %}">
+        <link rel="stylesheet" href="{% static 'css/picto-foundry-food.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/Footer-Basic.css' %}">
+        <link rel="stylesheet" href="{% static 'js/jquery-ui.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="icon" href="{% static 'favicon-1.ico' %}" type="image/x-icon">
+        <script type="text/javascript" src="{% static 'js/site.min.js' %}"></script>
+        
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Ben Gui Sushi Bar</a>
+						<i class="fa fa-cutlery" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                            <li><a class="navactive color_animation" href="#top">WELCOME</a></li>
+                            <li><a class="color_animation" id="nav-about" href="#story">ABOUT</a></li>
+                            <li><a class="color_animation" id="nav-menu" href="#menu">MENU</a></li>
+                            <li><a class="color_animation" href="#contact">CONTACT</a></li>
+                            
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+        {% block jumbtron %} {% endblock %}
+        
+        <!-- ============ Footer Section  ============= -->
+	
+        <div class="footer-basic" style="height:300px;">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Home Office Web Development © 2016</p>
+		</div>
+        </footer>
+        
+        <!-- ============ End Footer Section  ============= -->
+        
+        <script>
+			var map;
+			function initMap() {map = new google.maps.Map(document.getElementById('map'), {center: {lat: 37.228494, lng: -79.982947},zoom: 18});}							
+		</script>
+        
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8rHmxZETt_Z5y2p5DK3djT6vEx9MIbAE&callback=initMap"></script>
+        <script type="text/javascript" src="{% static 'js/jquery-1.10.2.min.js' %}"> </script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'js/jquery-1.10.2.js' %}"></script>     
+        <script type="text/javascript" src="{% static 'js/jquery.mixitup.min.js' %}" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+        <!-- <script type="text/javascript" src="js/main.js" ></script> -->
+		<script type="text/javascript" src="{% static 'js/scroll.js' %}"></script>
+    
+    </body>
+    
+</html>
+		

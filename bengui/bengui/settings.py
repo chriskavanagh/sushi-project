@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'grmmu_)%z85eed69=o6^138p5eoa$rl45*aq@&0vtsp1dtp-@='
+
 SECRET_KEY = os.environ.get('SUSHIPROJECT_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django_extensions',
     'sorl.thumbnail',
     'newsletter',
-    #'easy_timezones',
     
 ]
 
@@ -59,7 +58,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #'easy_timezones.middleware.EasyTimezoneMiddleware',
 ]
 
 ROOT_URLCONF = 'bengui.urls'
@@ -75,7 +73,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'easy_timezones.middleware.EasyTimezoneMiddleware',
             ],
         },
     },
@@ -164,7 +161,3 @@ EMAIL_USE_TLS = True
 # Newsletter Settings
 NEWSLETTER_RICHTEXT_WIDGET = "tinymce.widgets.TinyMCE"
 
-
-# django-easy-timezone settings
-#GEOIP_DATABASE = os.path.join(BASE_DIR, 'GeoIP.dat')
-#GEOIP_DATABASE = \'GeoIP.dat'

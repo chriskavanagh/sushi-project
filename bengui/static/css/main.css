@@ -652,4 +652,6 @@ em {
 	text-align: center;
 	letter-spacing: 0.09em;
 	font-weight: bold;
+	position: relative;
+	top: 30px;
 }
